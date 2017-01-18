@@ -13,3 +13,4 @@ applications:
   - conver-test
   env:
     NPM_CONFIG_PRODUCTION: false
+    WORKSPACE_ID: fc9130d7-f7a1-4c5d-a46c-5f482c34c1bf
