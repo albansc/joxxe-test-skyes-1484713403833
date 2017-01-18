@@ -201,7 +201,7 @@ var ConversationPanel = (function() {
                 'classNames':[(isUser ? 'imgUser' : 'imgWatson')],
                 'attributes': [{
                   'name':'src',
-                  'value':(isUser ? 'https://console.ng.bluemix.net/img/userFace.png' : 'https://console.ng.bluemix.net/img/watsonFace.png')
+                  'value':(isUser ? 'https://joxxe-test-skyes.mybluemix.net/img/userFace.png' : 'https://joxxe-test-skyes.mybluemix.net/img/watsonFace.png')
                 }]
               }]
             }]
