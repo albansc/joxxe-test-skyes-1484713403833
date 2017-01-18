@@ -23,7 +23,24 @@ var Conversation = require('watson-developer-cloud/conversation/v1'); // watson 
 var app = express();
 
 // Bootstrap application settings
-app.use(express.static('./public')); // load UI from public folder
+app.use(function(req, res, next) {
+  var allowedOrigins = ['http://localhost/','http://localhost','http://190.171.115.19','190.171.115.19','http://190.113.97.3'];
+  var origin = req.headers.origin;
+  //console.log(req.headers);
+
+   res.setHeader('Access-Control-Allow-Origin', origin);
+  var index =  './public';
+
+
+  //res.header('Access-Control-Allow-Origin', 'http://127.0.0.1:8020');
+  res.header('Access-Control-Allow-Methods', 'GET, OPTIONS');
+  res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  res.header('Access-Control-Allow-Credentials', true);
+  return next();
+
+// Bootstrap application settings
+app.use( express.static(index) ); // load UI from public folder
+});
 app.use(bodyParser.json());
 
 // Create the service wrapper
