@@ -201,7 +201,7 @@ var ConversationPanel = (function() {
                 'classNames':[(isUser ? 'imgUser' : 'imgWatson')],
                 'attributes': [{
                   'name':'src',
-                  'value':(isUser ? 'http://localhost:3000/img/userFace.png' : 'http://localhost:3000/img/watsonFace.png')
+                  'value':(isUser ? 'http://localhost:3000/simg/userFace.png' : 'http://localhost:3000/img/watsonFace.png')
                 }]
               }]
             }]
